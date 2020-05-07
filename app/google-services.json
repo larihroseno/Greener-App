@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "343834847086",
+    "firebase_url": "https://eminent-kit-232309.firebaseio.com",
+    "project_id": "eminent-kit-232309",
+    "storage_bucket": "eminent-kit-232309.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343834847086:android:ac7fcac2c21e3e36cc037f",
+        "android_client_info": {
+          "package_name": "com.example.greener1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343834847086-4ofduj02ps7d33ah7oh29mjr2suokqls.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAysk0egqAXlnprvV3wxbKXSHHh4yJ_rY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343834847086-4ofduj02ps7d33ah7oh29mjr2suokqls.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
