@@ -92,23 +92,27 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
 
             case R.id.item1:
-                Toast.makeText(getApplicationContext(), "StartActiviy 1", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, About.class);
 
                 startActivity(intent);
+
+
+
+
             case R.id.item2:
-                Toast.makeText(getApplicationContext(), "StartActiviy 2", Toast.LENGTH_SHORT).show();
+
                 Intent intent2 = new Intent(this, Testimoniais.class);
 
                 startActivity(intent2);
+
             case R.id.item3:
-                Toast.makeText(getApplicationContext(), "StartActiviy 3", Toast.LENGTH_SHORT).show();
+
                 Intent intent3 = new Intent(this, GreenTech.class);
 
                 startActivity(intent3);
 
         }
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 
 
