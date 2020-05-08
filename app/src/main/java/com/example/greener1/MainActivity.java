@@ -87,32 +87,35 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+           int id=item.getItemId();
 
+           if( id == R.id.item1)
+        {
 
-        switch (item.getItemId()){
+            Intent aboutIntent = new Intent(this, About.class);
+            startActivity(aboutIntent);
+        }
+        if( id == R.id.item2)
+        {
 
-            case R.id.item1:
-                Intent intent = new Intent(this, About.class);
+            Intent greenIntent= new Intent(this, GreenTech.class);
 
-                startActivity(intent);
-
-
-
-
-            case R.id.item2:
-
-                Intent intent2 = new Intent(this, Testimoniais.class);
-
-                startActivity(intent2);
-
-            case R.id.item3:
-
-                Intent intent3 = new Intent(this, GreenTech.class);
-
-                startActivity(intent3);
+            startActivity(greenIntent);
 
         }
-        return true;
+        if( id == R.id.item3)
+        {
+            Intent testimonialIntent = new Intent(this, Testimoniais.class);
+
+            startActivity(testimonialIntent);
+
+
+        }
+
+
+
+
+        return super.onOptionsItemSelected(item);
     }
 
 

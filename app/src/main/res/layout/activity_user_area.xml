@@ -4,70 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ec0e2513f139febe420abf834b52ac6c"
     tools:context=".UserAreaActivity">
 
     <TextView
-        android:id="@+id/tvWelcomeMsg"
-        android:layout_width="126dp"
+        android:id="@+id/textView14"
+        android:layout_width="256dp"
         android:layout_height="0dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginLeft="92dp"
-        android:layout_marginTop="49dp"
-        android:layout_marginBottom="41dp"
-        android:text="Welcome"
-        app:layout_constraintBottom_toTopOf="@+id/Username"
+        android:layout_marginTop="316dp"
+        android:layout_marginBottom="65dp"
+        android:text="Welcome to GREENER APP"
+        android:textColor="#FFEB3B"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/Username"
+        android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginBottom="25dp"
-        android:text="Username"
-        app:layout_constraintBottom_toTopOf="@+id/etEmail"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvWelcomeMsg" />
-
-    <EditText
-        android:id="@+id/etEmail"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:layout_marginBottom="33dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        android:layout_marginBottom="219dp"
+        android:text="APP STILL IN CONSTRUCTION"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Username" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="93dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginBottom="11dp"
-        android:text="Age"
-        app:layout_constraintBottom_toTopOf="@+id/etAge"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
-
-    <EditText
-        android:id="@+id/etAge"
-        android:layout_width="312dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="336dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
 </androidx.constraintlayout.widget.ConstraintLayout>
