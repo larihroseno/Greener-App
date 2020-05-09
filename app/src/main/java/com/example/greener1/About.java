@@ -19,32 +19,6 @@ public class About extends AppCompatActivity {
         setContentView(R.layout.activity_about);
 
 
-    Button fab = findViewById(R.id.btStart);
-        fab.setOnClickListener(new View.OnClickListener() {
-
-
-        @Override
-
-        public void onClick(View fab) {
-
-            goToMainActivity();
-
-        }
-
-
-
-    });
-
-
-
-
-}
-    private void goToMainActivity() {
-
-        Intent intent = new Intent(this, MainActivity.class);
-
-        startActivity(intent);
-
     }
 
 
@@ -82,6 +56,14 @@ public class About extends AppCompatActivity {
             Intent testimonialIntent = new Intent(this, Testimoniais.class);
 
             startActivity(testimonialIntent);
+
+
+        }
+        if( id == R.id.item4)
+        {
+            Intent intent = new Intent(this, MainActivity.class);
+
+            startActivity(intent);
 
 
         }

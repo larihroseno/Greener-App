@@ -10,8 +10,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Logout"></activity>
+        android:theme="@style/AppTheme"
+        android:largeHeap="true">
+        <activity android:name=".EnergyActivity"></activity>
+        <activity android:name=".DietActivity" />
+        <activity android:name=".WaterActivity" />
+        <activity android:name=".WasteActivity" />
+        <activity android:name=".Logout" />
         <activity android:name=".ChallengesHistory" />
         <activity android:name=".SettingsUser" />
         <activity android:name=".MainActivity">
@@ -27,6 +32,11 @@
         <activity android:name=".About" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".UserAreaActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts"
+            />
     </application>
 
 </manifest>

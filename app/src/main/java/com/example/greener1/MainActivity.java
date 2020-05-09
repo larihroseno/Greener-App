@@ -111,6 +111,14 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+        if( id == R.id.item4)
+        {
+            Intent intent = new Intent(this, MainActivity.class);
+
+            startActivity(intent);
+
+
+        }
 
 
 

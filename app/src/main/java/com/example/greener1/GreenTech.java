@@ -5,45 +5,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class GreenTech extends AppCompatActivity {
+
+    private static final String TAG = "TAG";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_green_tech);
 
-
-        Button fab = findViewById(R.id.btStart);
-        fab.setOnClickListener(new View.OnClickListener() {
-
-
-            @Override
-
-            public void onClick(View fab) {
-
-                goToMainActivity();
-
-            }
-
-
-
-        });
-
-
-
-
-    }
-    private void goToMainActivity() {
-
-        Intent intent = new Intent(this, MainActivity.class);
-
-        startActivity(intent);
 
     }
 
@@ -85,7 +63,14 @@ public class GreenTech extends AppCompatActivity {
 
 
         }
+        if( id == R.id.item4)
+        {
+            Intent intent = new Intent(this, MainActivity.class);
 
+            startActivity(intent);
+
+
+        }
 
 
 

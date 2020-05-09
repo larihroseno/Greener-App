@@ -12,38 +12,32 @@
 
     <Button
         android:id="@+id/btLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="192dp"
-        android:layout_marginBottom="190dp"
+        android:layout_width="266dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="296dp"
+        android:layout_marginBottom="21dp"
+        android:fontFamily="@font/capriola"
         android:text="LOGIN"
-        android:textColor="#4CAF50"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        android:textColor="#3F8E42"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btRegister"
+        app:layout_constraintStart_toStartOf="@+id/btRegister"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="81dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="92dp"
+        android:fontFamily="@font/capriola"
         android:text="REGISTER"
-        android:textColor="#4CAF50"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btLogin"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="249dp"
-        android:layout_height="98dp"
-        android:text="Greener - The environmentally friendly website"
-        android:textColor="#4CAF50"
-        android:textSize="24sp"
+        android:textColor="#3F8E42"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btLogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

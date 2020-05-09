@@ -21,23 +21,6 @@ public class Testimoniais extends AppCompatActivity {
 
 
 
-        Button fab = findViewById(R.id.btStart);
-        fab.setOnClickListener(new View.OnClickListener() {
-
-
-            @Override
-
-            public void onClick(View fab) {
-
-                goToMainActivity();
-
-            }
-
-
-
-        });
-
-
 
 
     }
@@ -84,6 +67,14 @@ public class Testimoniais extends AppCompatActivity {
             Intent testimonialIntent = new Intent(this, Testimoniais.class);
 
             startActivity(testimonialIntent);
+
+
+        }
+        if( id == R.id.item4)
+        {
+            Intent intent = new Intent(this, MainActivity.class);
+
+            startActivity(intent);
 
 
         }
