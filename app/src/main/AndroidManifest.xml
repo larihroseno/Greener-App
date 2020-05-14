@@ -3,16 +3,23 @@
     package="com.example.greener1">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:largeHeap="true">
-        <activity android:name=".EnergyActivity"></activity>
+        android:theme="@style/AppTheme">
+        <activity android:name=".DashboardActivity"></activity>
+        <activity android:name=".AddReusable" />
+        <activity android:name=".CompletedChallenge" />
+        <activity android:name=".GoRecycle" />
+        <activity android:name=".GoReusable" />
+        <activity android:name=".EnergyActivity" />
         <activity android:name=".DietActivity" />
         <activity android:name=".WaterActivity" />
         <activity android:name=".WasteActivity" />
@@ -35,8 +42,7 @@
 
         <meta-data
             android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts"
-            />
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
