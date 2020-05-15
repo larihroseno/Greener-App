@@ -100,13 +100,13 @@ public class WasteActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id=item.getItemId();
 
-        if( id == R.id.item1)
+        if (id == R.id.home)
         {
 
-            Intent homeIntent = new Intent(this, UserAreaActivity.class);
+            Intent homeIntent = new Intent(this, DashboardActivity.class);
             startActivity(homeIntent);
         }
-        if( id == R.id.item2)
+        if (id == R.id.profile)
         {
 
             Intent settingsIntent= new Intent(this, SettingsUser.class);
@@ -114,17 +114,25 @@ public class WasteActivity extends AppCompatActivity {
             startActivity(settingsIntent);
 
         }
-        if( id == R.id.item3)
+        if( id == R.id.logOut)
         {
-            Intent challengeIntent = new Intent(this, ChallengesHistory.class);
+            Intent challengeIntent = new Intent(this, Logout.class);
 
             startActivity(challengeIntent);
 
 
         }
-        if( id == R.id.item4)
+        if (id == R.id.users)
         {
             Intent logoutIntent = new Intent(this, Logout.class);
+
+            startActivity(logoutIntent);
+
+
+        }
+        if (id == R.id.challenge)
+        {
+            Intent logoutIntent = new Intent(this, UserAreaActivity.class);
 
             startActivity(logoutIntent);
 
@@ -134,9 +142,9 @@ public class WasteActivity extends AppCompatActivity {
 
 
 
+
         return super.onOptionsItemSelected(item);
     }
-
 
 
 }

@@ -113,6 +113,7 @@ public class AddReusable extends AppCompatActivity {
 
                 userName = "" + documentSnapshot.getString("userName");
                 email = "" + documentSnapshot.getString("email");
+                dp = "" + documentSnapshot.get("dp");
 
             }
 
@@ -168,13 +169,13 @@ public class AddReusable extends AppCompatActivity {
     }
 
     private void uploadData(final String title, final String description, String uri) {
-          pd.setMessage("Publishing post...");
-          pd.show();
-          //for post-image name, post-id, post-publishi-time
+        pd.setMessage("Publishing post...");
+        pd.show();
+        //for post-image name, post-id, post-publishi-time
         final String timeStamp = String.valueOf(System.currentTimeMillis());
-        String filePathAndName="Posts" + "post_" +timeStamp;
+        String filePathAndName = "Posts" + "post_" + timeStamp;
 
-        if(!uri.equals("noImage")){
+        if (!uri.equals("noImage")) {
             //post with image
 
             StorageReference ref = FirebaseStorage.getInstance().getReference().child(filePathAndName);
@@ -183,74 +184,75 @@ public class AddReusable extends AppCompatActivity {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             //image is uploaded to firebase storage, now get its url
-                           Task<Uri> uriTask=taskSnapshot.getStorage().getDownloadUrl();
-                           while(!uriTask.isSuccessful());
-                           String downloadUri=uriTask.getResult().toString();
+                            Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
+                            while (!uriTask.isSuccessful()) ;
+                            String downloadUri = uriTask.getResult().toString();
 
-                           if(uriTask.isSuccessful()){
-                               //url is recveid upload post to firebase fiestore
-                               HashMap<Object, String> hashMap=new HashMap<>();
-                               //put post info
-                               hashMap.put("uid", userId);
-                               hashMap.put("userName", userName);
-                               hashMap.put("email", email);
-                               hashMap.put("pId", timeStamp);
-                               hashMap.put("pTitle", title);
-                               hashMap.put("pDescr", description);
-                               hashMap.put("profileImage", downloadUri);
-                               hashMap.put("pTime", timeStamp);
-
-
-                               //PATH TO STORE POST DATA
-                               DocumentReference documentReference = fStore.collection("Posts").document(userId);
-                               //PUT DATA IN THIS REF
-
-                               documentReference.collection(timeStamp).add(hashMap)
-                                       .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                                           @Override
-                                           public void onSuccess(DocumentReference documentReference) {
-                                               //added in firestore
-                                               pd.dismiss();
-                                               Toast.makeText(AddReusable.this, "Post Published",Toast.LENGTH_SHORT).show();
-                                               //reset views
-                                               titleEt.setText("");
-                                               descriptionEt.setText("");
-                                               imageView.setImageURI(null);
-                                               image_uri= null;
+                            if (uriTask.isSuccessful()) {
+                                //url is recveid upload post to firebase fiestore
+                                HashMap<Object, String> hashMap = new HashMap<>();
+                                //put post info
+                                hashMap.put("uid", userId);
+                                hashMap.put("userName", userName);
+                                hashMap.put("uDp", dp);
+                                hashMap.put("email", email);
+                                hashMap.put("pId", timeStamp);
+                                hashMap.put("pTitle", title);
+                                hashMap.put("pDescr", description);
+                                hashMap.put("profileImage", downloadUri);
+                                hashMap.put("pTime", timeStamp);
 
 
-                                           }
-                                       })
-                                       .addOnFailureListener(new OnFailureListener() {
-                                           @Override
-                                           public void onFailure(@NonNull Exception e) {
-                                               //failed adding post in firestore
-                                               Toast.makeText(AddReusable.this, ""+e.getMessage(),Toast.LENGTH_SHORT).show();
-                                           }
-                                       });
+                                //PATH TO STORE POST DATA
+                                FirebaseFirestore db = FirebaseFirestore.getInstance();
+                                db.collection("Posts");
+                                db.collection("Posts").add(hashMap)
+
+                                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                            @Override
+                                            public void onSuccess(DocumentReference documentReference) {
 
 
-                           }
+                                                //added in firestore
+                                                pd.dismiss();
+                                                Toast.makeText(AddReusable.this, "Post Published", Toast.LENGTH_SHORT).show();
+                                                //reset views
+                                                titleEt.setText("");
+                                                descriptionEt.setText("");
+                                                imageView.setImageURI(null);
+                                                image_uri = null;
 
 
+                                            }
+                                        })
+                                        .addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                //failed uploading image
+                                                pd.dismiss();
+                                                Toast.makeText(AddReusable.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+                            }
                         }
                     })
+
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                         //failed uploading image
+                            //failed uploading image
                             pd.dismiss();
-                            Toast.makeText(AddReusable.this, ""+e.getMessage(),Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AddReusable.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     });
 
 
-
-        }else{
-            HashMap<Object, String> hashMap=new HashMap<>();
+        } else {
+            HashMap<Object, String> hashMap = new HashMap<>();
             //put post info
             hashMap.put("uid", userId);
             hashMap.put("userName", userName);
+            hashMap.put("uDp", dp);
             hashMap.put("email", email);
             hashMap.put("pId", timeStamp);
             hashMap.put("pTitle", title);
@@ -260,29 +262,33 @@ public class AddReusable extends AppCompatActivity {
 
 
             //PATH TO STORE POST DATA
-            DocumentReference documentReference = fStore.collection("Posts").document(userId);
+            FirebaseFirestore db = FirebaseFirestore.getInstance();
+            db.collection("Posts");
+            db.collection("Posts").add(hashMap)
 
-            //PUT DATA IN THIS REF
-
-            documentReference.collection(timeStamp).add(hashMap)
                     .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                         @Override
                         public void onSuccess(DocumentReference documentReference) {
+
+
                             //added in firestore
                             pd.dismiss();
-                            Toast.makeText(AddReusable.this, "Post Published",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AddReusable.this, "Post Published", Toast.LENGTH_SHORT).show();
+                            //reset views
                             titleEt.setText("");
                             descriptionEt.setText("");
                             imageView.setImageURI(null);
-                            image_uri= null;
+                            image_uri = null;
+
 
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            //failed adding post in firestore
-                            Toast.makeText(AddReusable.this, ""+e.getMessage(),Toast.LENGTH_SHORT).show();
+                            //failed uploading image
+                            pd.dismiss();
+                            Toast.makeText(AddReusable.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     });
 
@@ -486,11 +492,13 @@ public class AddReusable extends AppCompatActivity {
                         }
 
 
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-
+        MenuInflater inflater= getMenuInflater();
         inflater.inflate(R.menu.home_menu, menu);
+
 
 
         return true;
@@ -498,29 +506,41 @@ public class AddReusable extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
+        int id=item.getItemId();
 
-        if (id == R.id.item1) {
+        if (id == R.id.home)
+        {
 
-            Intent homeIntent = new Intent(this, UserAreaActivity.class);
+            Intent homeIntent = new Intent(this, HomeFragment.class);
             startActivity(homeIntent);
         }
-        if (id == R.id.item2) {
+        if (id == R.id.profile)
+        {
 
-            Intent settingsIntent = new Intent(this, SettingsUser.class);
+            Intent settingsIntent= new Intent(this, SettingsUser.class);
 
             startActivity(settingsIntent);
 
         }
-        if (id == R.id.item3) {
-            Intent challengeIntent = new Intent(this, ChallengesHistory.class);
+        if( id == R.id.logOut)
+        {
+            Intent challengeIntent = new Intent(this, Logout.class);
 
             startActivity(challengeIntent);
 
 
         }
-        if (id == R.id.item4) {
+        if (id == R.id.users)
+        {
             Intent logoutIntent = new Intent(this, Logout.class);
+
+            startActivity(logoutIntent);
+
+
+        }
+        if (id == R.id.challenge)
+        {
+            Intent logoutIntent = new Intent(this, UserAreaActivity.class);
 
             startActivity(logoutIntent);
 
@@ -528,9 +548,13 @@ public class AddReusable extends AppCompatActivity {
         }
 
 
+
+
+
         return super.onOptionsItemSelected(item);
     }
-                    }
+
+}
 
 
 

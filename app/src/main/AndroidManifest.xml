@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DashboardActivity"></activity>
+        <activity android:name=".DashboardActivity" />
         <activity android:name=".AddReusable" />
         <activity android:name=".CompletedChallenge" />
         <activity android:name=".GoRecycle" />
@@ -26,6 +26,7 @@
         <activity android:name=".Logout" />
         <activity android:name=".ChallengesHistory" />
         <activity android:name=".SettingsUser" />
+        <activity android:name=".HomeFragment" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

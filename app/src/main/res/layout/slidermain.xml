@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#FFFDFD">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="120dp"
+        android:layout_height="143dp"
+        android:background="#FFFFFF"
+        app:srcCompat="@drawable/logonew"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="94dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="335dp"
+        android:layout_height="146dp"
+        android:background="#ACC68D"
+        android:fontFamily="@font/capriola"
+        android:text="#Greener is a Website and Mobile app that focuses on spreading awareness on Sustainable Life Habits. "
+        android:textColor="#17631A"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="390dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="302dp"
+        android:layout_height="97dp"
+        android:fontFamily="@font/capriola"
+        android:text="GREENER"
+        android:textColor="#62833D"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="264dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

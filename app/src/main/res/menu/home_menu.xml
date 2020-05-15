@@ -3,26 +3,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
+        <item
+            android:id="@+id/home"
+            android:title="Home"
+            android:icon="@drawable/ic_home_black_24dp"
+            app:showAsAction="always"/>
 
-    <item android:id="@+id/item1"
+       <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_black_"
+        app:showAsAction=""
+           android:title="Search"
+           app:actionViewClass="android.widget.SearchView"/>
 
-        android:title="Home"
-        app:showAsAction="ifRoom"/>
 
-    <item android:id="@+id/item2"
+        <item
+            android:id="@+id/challenge"
+            android:title="Challenges"
+            android:icon="@drawable/ic_challenge_black"
+            app:showAsAction="always"/>
 
-        android:title="Settings"
+
+
+        <item
+            android:id="@+id/users"
+            android:title="Users"
+            android:icon="@drawable/ic_people_black"
+            app:showAsAction="ifRoom"/>
+
+        <item
+            android:id="@+id/profile"
+            android:title="Profile"
+            android:icon="@drawable/ic_person"
+            app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/logOut"
+        android:title="LogOut"
         app:showAsAction="never"/>
 
-    <item android:id="@+id/item3"
-
-        android:title="Challenges History"
-        app:showAsAction="never"/>
-
-    <item android:id="@+id/item4"
-
-        android:title="Logout"
-        app:showAsAction="never"/>
 
 
-</menu>
+
+
+
+    </menu>

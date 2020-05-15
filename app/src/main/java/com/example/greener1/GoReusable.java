@@ -96,13 +96,13 @@ import androidx.viewpager.widget.ViewPager;
             public boolean onOptionsItemSelected(@NonNull MenuItem item) {
                 int id=item.getItemId();
 
-                if( id == R.id.item1)
+                if (id == R.id.home)
                 {
 
-                    Intent homeIntent = new Intent(this, UserAreaActivity.class);
+                    Intent homeIntent = new Intent(this, DashboardActivity.class);
                     startActivity(homeIntent);
                 }
-                if( id == R.id.item2)
+                if (id == R.id.profile)
                 {
 
                     Intent settingsIntent= new Intent(this, SettingsUser.class);
@@ -110,15 +110,15 @@ import androidx.viewpager.widget.ViewPager;
                     startActivity(settingsIntent);
 
                 }
-                if( id == R.id.item3)
+                if( id == R.id.logOut)
                 {
-                    Intent challengeIntent = new Intent(this, ChallengesHistory.class);
+                    Intent challengeIntent = new Intent(this, Logout.class);
 
                     startActivity(challengeIntent);
 
 
                 }
-                if( id == R.id.item4)
+                if (id == R.id.users)
                 {
                     Intent logoutIntent = new Intent(this, Logout.class);
 
@@ -126,6 +126,15 @@ import androidx.viewpager.widget.ViewPager;
 
 
                 }
+                if (id == R.id.challenge)
+                {
+                    Intent logoutIntent = new Intent(this, UserAreaActivity.class);
+
+                    startActivity(logoutIntent);
+
+
+                }
+
 
 
 
