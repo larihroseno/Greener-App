@@ -18,7 +18,7 @@
 
 
     <Button
-        android:id="@+id/btnGoRecycle"
+        android:id="@+id/btnRecycle"
         android:layout_width="396dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
@@ -32,7 +32,7 @@
         app:layout_constraintVertical_bias="0.97" />
 
     <Button
-        android:id="@+id/btnGoReusable"
+        android:id="@+id/btnReusable"
         android:layout_width="396dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"

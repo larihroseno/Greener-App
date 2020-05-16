@@ -14,7 +14,7 @@ import androidx.viewpager.widget.ViewPager;
 
 public class WaterActivity extends AppCompatActivity {
     ViewPager viewPager;
-    Button btnReusable, btnRecycle;
+    Button btnGlass, btnFull;
     int[] layouts;
     Adapter adapter;
     @Override
@@ -23,8 +23,8 @@ public class WaterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_water);
 
         viewPager = findViewById(R.id.pager);
-        btnReusable= findViewById(R.id.btnGoReusable);
-        btnRecycle= findViewById(R.id.btnGoRecycle);
+        btnGlass= findViewById(R.id.btnGoGlass);
+        btnFull= findViewById(R.id.btnFull);
 
         layouts = new int[]{
                 R.layout.slider3,
@@ -35,7 +35,7 @@ public class WaterActivity extends AppCompatActivity {
         adapter = new Adapter(this, layouts);
         viewPager.setAdapter(adapter);
 
-        Button fab = findViewById(R.id.btnGoReusable);
+        Button fab = findViewById(R.id.btnGoGlass);
         fab.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -43,12 +43,12 @@ public class WaterActivity extends AppCompatActivity {
             public void onClick (View fab){
 
 
-                goToReusableActivity();
+                goToGlassActivity();
 
             }
         });
 
-        Button fab2 = findViewById(R.id.btnGoRecycle);
+        Button fab2 = findViewById(R.id.btnFull);
         fab2.setOnClickListener(new View.OnClickListener() {
 
 
@@ -56,7 +56,7 @@ public class WaterActivity extends AppCompatActivity {
 
             public void onClick(View fab2) {
 
-                goToRecycleActivity();
+                goToFullActivity();
 
             }
 
@@ -68,16 +68,16 @@ public class WaterActivity extends AppCompatActivity {
 
 
     }
-    private void goToReusableActivity() {
+    private void goToGlassActivity() {
 
-        Intent intent = new Intent(this, GoReusable.class);
+        Intent intent = new Intent(this, GoGlass.class);
 
         startActivity(intent);
 
     }
-    private void  goToRecycleActivity() {
+    private void  goToFullActivity() {
 
-        Intent intent2 = new Intent(this, GoRecycle.class);
+        Intent intent2 = new Intent(this, GoFull.class);
 
         startActivity(intent2);
 
@@ -121,14 +121,7 @@ public class WaterActivity extends AppCompatActivity {
 
 
         }
-        if (id == R.id.users)
-        {
-            Intent logoutIntent = new Intent(this, Logout.class);
 
-            startActivity(logoutIntent);
-
-
-        }
         if (id == R.id.challenge)
         {
             Intent logoutIntent = new Intent(this, UserAreaActivity.class);

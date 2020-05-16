@@ -43,7 +43,7 @@ import com.google.firebase.storage.UploadTask;
 
 import java.util.HashMap;
 
-public class AddReusable extends AppCompatActivity {
+public class AddEvidence extends AppCompatActivity {
 
 
     FirebaseAuth fAuth;
@@ -84,7 +84,7 @@ public class AddReusable extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_reusable);
+        setContentView(R.layout.activity_add_evidence);
         actionBar = getSupportActionBar();
         actionBar.setTitle("ADD New Post");
         //enable back button in action bar
@@ -147,11 +147,11 @@ public class AddReusable extends AppCompatActivity {
                 String description = descriptionEt.getText().toString().trim();
                 if (TextUtils.isEmpty(title)) {
 
-                    Toast.makeText(AddReusable.this, "Enter Title", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddEvidence.this, "Enter Title", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(description)) {
-                    Toast.makeText(AddReusable.this, "Enter Description...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddEvidence.this, "Enter Description...", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -215,7 +215,7 @@ public class AddReusable extends AppCompatActivity {
 
                                                 //added in firestore
                                                 pd.dismiss();
-                                                Toast.makeText(AddReusable.this, "Post Published", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(AddEvidence.this, "Post Published", Toast.LENGTH_SHORT).show();
                                                 //reset views
                                                 titleEt.setText("");
                                                 descriptionEt.setText("");
@@ -230,7 +230,7 @@ public class AddReusable extends AppCompatActivity {
                                             public void onFailure(@NonNull Exception e) {
                                                 //failed uploading image
                                                 pd.dismiss();
-                                                Toast.makeText(AddReusable.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(AddEvidence.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
                                             }
                                         });
                             }
@@ -242,7 +242,7 @@ public class AddReusable extends AppCompatActivity {
                         public void onFailure(@NonNull Exception e) {
                             //failed uploading image
                             pd.dismiss();
-                            Toast.makeText(AddReusable.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AddEvidence.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     });
 
@@ -273,7 +273,7 @@ public class AddReusable extends AppCompatActivity {
 
                             //added in firestore
                             pd.dismiss();
-                            Toast.makeText(AddReusable.this, "Post Published", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AddEvidence.this, "Post Published", Toast.LENGTH_SHORT).show();
                             //reset views
                             titleEt.setText("");
                             descriptionEt.setText("");
@@ -288,7 +288,7 @@ public class AddReusable extends AppCompatActivity {
                         public void onFailure(@NonNull Exception e) {
                             //failed uploading image
                             pd.dismiss();
-                            Toast.makeText(AddReusable.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(AddEvidence.this, "" + e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     });
 
@@ -530,14 +530,7 @@ public class AddReusable extends AppCompatActivity {
 
 
         }
-        if (id == R.id.users)
-        {
-            Intent logoutIntent = new Intent(this, Logout.class);
 
-            startActivity(logoutIntent);
-
-
-        }
         if (id == R.id.challenge)
         {
             Intent logoutIntent = new Intent(this, UserAreaActivity.class);

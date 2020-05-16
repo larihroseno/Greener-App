@@ -5,17 +5,86 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 public class DietActivity extends AppCompatActivity {
-
+    ViewPager viewPager;
+    Button btnDairy, btnVegan;
+    int[] layouts;
+    Adapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diet);
+
+        viewPager = findViewById(R.id.pager);
+        btnDairy= findViewById(R.id.btnDairy);
+        btnVegan= findViewById(R.id.btnVegan);
+
+        layouts = new int[]{
+                R.layout.slider5,
+                R.layout.slider6
+
+        };
+
+        adapter = new Adapter(this, layouts);
+        viewPager.setAdapter(adapter);
+
+        Button fab = findViewById(R.id.btnDairy);
+        fab.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+
+            public void onClick (View fab){
+
+
+                goToDairyActivity();
+
+            }
+        });
+
+        Button fab2 = findViewById(R.id.btnVegan);
+        fab2.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
+
+            public void onClick(View fab2) {
+
+                goToVeganActivity();
+
+            }
+
+
+
+        });
+
+
+
+
     }
+    private void goToDairyActivity() {
+
+        Intent intent = new Intent(this, GoDairy.class);
+
+        startActivity(intent);
+
+    }
+    private void  goToVeganActivity() {
+
+        Intent intent2 = new Intent(this, GoVegan.class);
+
+        startActivity(intent2);
+
+    }
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater= getMenuInflater();
@@ -52,14 +121,7 @@ public class DietActivity extends AppCompatActivity {
 
 
         }
-        if (id == R.id.users)
-        {
-            Intent logoutIntent = new Intent(this, Logout.class);
 
-            startActivity(logoutIntent);
-
-
-        }
         if (id == R.id.challenge)
         {
             Intent logoutIntent = new Intent(this, UserAreaActivity.class);
@@ -76,4 +138,11 @@ public class DietActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+
+
+
 }
+
+
+

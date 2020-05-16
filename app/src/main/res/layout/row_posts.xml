@@ -34,13 +34,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_weight="1">
+
                 <TextView
                     android:id="@+id/userNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/capriola"
                     android:text="Name"
                     android:textColor="@color/colorPrimaryDark"
-                    android:textSize="20sp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:textSize="20sp" />
 
 
                 <TextView
@@ -63,24 +65,27 @@
             android:id="@+id/pTitleTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textStyle="bold"
+            android:autoLink="all"
+            android:fontFamily="@font/capriola"
             android:text="Title"
-            android:autoLink="all"/>
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/pDescriptionTv"
-            android:text="The description of the post"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autoLink="all"/>
 
         <ImageView
             android:id="@+id/pImageIv"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:background="@color/cardview_light_background"/>
+
+        <TextView
+            android:id="@+id/pDescriptionTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:fontFamily="@font/capriola"
+            android:text="The description of the post"
+            android:textColor="@color/colorPrimaryDark" />
 
         <TextView
             android:id="@+id/pLikesTv"
@@ -105,33 +110,36 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="LIKE"
-                android:drawableLeft="@drawable/ic_like_black"
                 android:background="@null"
+                android:drawableStart="@drawable/ic_like_action"
+                android:drawableLeft="@drawable/ic_like_action"
                 android:drawablePadding="5dp"
-                android:drawableStart="@drawable/ic_like_black"
-                />
+                android:fontFamily="@font/capriola"
+                android:text="LIKE" />
 
             <Button
                 android:id="@id/commentBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="COMMENT"
-                android:drawableLeft="@drawable/ic_comment"
                 android:background="@null"
+                android:drawableStart="@drawable/ic_comment"
+                android:drawableLeft="@drawable/ic_comment"
                 android:drawablePadding="5dp"
-                android:drawableStart="@drawable/ic_comment"/>
+                android:fontFamily="@font/capriola"
+                android:text="COMMENT" />
+
             <Button
                 android:id="@id/shareBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="SHARE"
-                android:drawableLeft="@drawable/ic_share_black"
                 android:background="@null"
+                android:drawableStart="@drawable/ic_share_black"
+                android:drawableLeft="@drawable/ic_share_black"
                 android:drawablePadding="5dp"
-                android:drawableStart="@drawable/ic_share_black"/>
+                android:fontFamily="@font/capriola"
+                android:text="SHARE" />
 
 
 

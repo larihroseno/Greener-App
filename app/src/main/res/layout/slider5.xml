@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BAF6F2F2">
+    android:background="@drawable/greenerplain">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -14,17 +14,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.120000005"
-        app:srcCompat="@drawable/recup" />
+        app:layout_constraintVertical_bias="0.36"
+        app:srcCompat="@drawable/vegan" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="152dp"
-        android:layout_height="52dp"
+        android:layout_width="201dp"
+        android:layout_height="61dp"
         android:background="#F4F1F1"
         android:fontFamily="@font/capriola"
         android:padding="10dp"
-        android:text="Go Reusable"
+        android:text="Go dairy free!"
         android:textColor="#17631A"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -40,7 +40,7 @@
         android:layout_height="63dp"
         android:background="#F4F1F1"
         android:fontFamily="@font/capriola"
-        android:text="Avoid using plastic or papes mugs, bottles or bags and avoid generating waste."
+        android:text="The dairy industry emits just as many greenhouse gases as the meat industry!"
         android:textColor="#17631A"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -4,7 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BAF6F2F2">
+    android:background="@drawable/greenerplain">
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/greenerplain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -22,7 +35,7 @@
         android:layout_width="152dp"
         android:layout_height="0dp"
         android:layout_marginBottom="386dp"
-        android:background="#F4F1F1"
+        android:background="#BAF6F2F2"
         android:fontFamily="@font/capriola"
         android:padding="10dp"
         android:text="Go Reusable"
@@ -105,28 +118,30 @@
 
     <Button
         android:id="@+id/btnAdd"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="138dp"
+        android:layout_height="55dp"
         android:layout_marginEnd="56dp"
-        android:layout_marginBottom="39dp"
+        android:background="#BAF6F2F2"
         android:text="ADD Evidence"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toEndOf="@+id/btnBack"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94" />
 
     <Button
         android:id="@+id/btnBack"
-        android:layout_width="0dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="25dp"
+        android:layout_width="138dp"
+        android:layout_height="55dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="35dp"
+        android:background="#BAF6F2F2"
         android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnAdd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.94" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

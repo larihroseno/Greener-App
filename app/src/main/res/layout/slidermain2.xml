@@ -5,48 +5,4 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:backgroundTint="#FFFFFF">
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="335dp"
-        android:layout_height="228dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.107"
-        app:srcCompat="@drawable/logo1" />
-
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="352dp"
-        android:layout_height="60dp"
-        android:background="#F4F1F1"
-        android:fontFamily="@font/capriola"
-        android:padding="10dp"
-        android:text="Recycle or Clean a public space"
-        android:textColor="#17631A"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.01999998" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="319dp"
-        android:layout_height="63dp"
-        android:background="#F4F1F1"
-        android:fontFamily="@font/capriola"
-        android:text="Choose a public space and clean it using appropriate equipment. You can also recycle."
-        android:textColor="#17631A"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.04000002" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:background="@drawable/aboutgreener" />

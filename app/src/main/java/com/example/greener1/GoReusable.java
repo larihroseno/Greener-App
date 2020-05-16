@@ -66,7 +66,7 @@ import androidx.viewpager.widget.ViewPager;
             }
             private void goToEvidenceActivity() {
 
-                Intent intent = new Intent(this, AddReusable.class);
+                Intent intent = new Intent(this, AddEvidence.class);
 
                 startActivity(intent);
 
@@ -118,14 +118,8 @@ import androidx.viewpager.widget.ViewPager;
 
 
                 }
-                if (id == R.id.users)
-                {
-                    Intent logoutIntent = new Intent(this, Logout.class);
-
-                    startActivity(logoutIntent);
 
 
-                }
                 if (id == R.id.challenge)
                 {
                     Intent logoutIntent = new Intent(this, UserAreaActivity.class);

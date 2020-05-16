@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BAF6F2F2">
+    android:background="@drawable/greenerplain">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -14,17 +14,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.120000005"
-        app:srcCompat="@drawable/recycle" />
+        app:layout_constraintVertical_bias="0.25"
+        app:srcCompat="@drawable/walk" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="352dp"
-        android:layout_height="60dp"
+        android:layout_width="251dp"
+        android:layout_height="72dp"
         android:background="#F4F1F1"
         android:fontFamily="@font/capriola"
         android:padding="10dp"
-        android:text="Recycle or Clean a public space"
+        android:text="Walk or cycle to Work/College"
         android:textColor="#17631A"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -40,12 +40,12 @@
         android:layout_height="63dp"
         android:background="#F4F1F1"
         android:fontFamily="@font/capriola"
-        android:text="Choose a public space and clean it using appropriate equipment. You can also recycle."
+        android:text="By implementing these options as your daily commute choice you will contribute to reducing CO2 emissions."
         android:textColor="#17631A"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
-        app:layout_constraintVertical_bias="0.04000002" />
+        app:layout_constraintVertical_bias="0.120000005" />
 </androidx.constraintlayout.widget.ConstraintLayout>

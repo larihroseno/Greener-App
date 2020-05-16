@@ -5,8 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ec0e2513f139febe420abf834b52ac6c"
+    android:background="@drawable/greenerplain"
     tools:context=".GreenTech">
+
+
 
     <LinearLayout
         android:layout_width="match_parent"

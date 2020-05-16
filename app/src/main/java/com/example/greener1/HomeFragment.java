@@ -265,11 +265,7 @@ public class HomeFragment extends Fragment {
               fAuth.signOut();
           }
 
-        if (id == R.id.users) {
-            startActivity (new Intent(getActivity(), Logout.class));
 
-
-          }
 
 
           return super.onOptionsItemSelected(item);

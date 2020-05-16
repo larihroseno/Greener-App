@@ -12,7 +12,7 @@
        <item
         android:id="@+id/action_search"
         android:icon="@drawable/ic_search_black_"
-        app:showAsAction=""
+        app:showAsAction="always"
            android:title="Search"
            app:actionViewClass="android.widget.SearchView"/>
 
@@ -26,16 +26,11 @@
 
 
         <item
-            android:id="@+id/users"
-            android:title="Users"
-            android:icon="@drawable/ic_people_black"
-            app:showAsAction="ifRoom"/>
-
-        <item
             android:id="@+id/profile"
             android:title="Profile"
             android:icon="@drawable/ic_person"
             app:showAsAction="ifRoom"/>
+
     <item
         android:id="@+id/logOut"
         android:title="LogOut"

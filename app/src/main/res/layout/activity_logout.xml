@@ -4,46 +4,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ec0e2513f139febe420abf834b52ac6c"
+    android:background="@drawable/greenerplain"
     tools:context=".Logout">
-
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="354dp"
-        android:layout_height="108dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="229dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="152dp"
-        android:text="Are you sure you want to leave the APP?"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btYes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btYes"
-        android:layout_width="116dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="217dp"
+        android:layout_width="148dp"
+        android:layout_height="55dp"
+        android:background="#BAF6F2F2"
+        android:fontFamily="@font/capriola"
         android:text="Yes, I am sure"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btNo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="383dp" />
 
     <Button
         android:id="@+id/btNo"
-        android:layout_width="113dp"
-        android:layout_height="74dp"
-        android:layout_marginEnd="95dp"
+        android:layout_width="148dp"
+        android:layout_height="55dp"
+        android:background="#BAF6F2F2"
+        android:fontFamily="@font/capriola"
         android:text="No!"
-        app:layout_constraintBottom_toBottomOf="@+id/btYes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btYes"
-        app:layout_constraintTop_toTopOf="@+id/btYes" />
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="383dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="319dp"
+        android:layout_height="84dp"
+        android:fontFamily="@font/capriola"
+        android:text="Are you sure you want to leave #GreenerApp ?"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="246dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

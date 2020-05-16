@@ -125,14 +125,7 @@ public class UserAreaActivity extends AppCompatActivity {
 
 
         }
-        if (id == R.id.users)
-        {
-            Intent logoutIntent = new Intent(this, Logout.class);
 
-            startActivity(logoutIntent);
-
-
-        }
         if (id == R.id.challenge)
         {
             Intent logoutIntent = new Intent(this, UserAreaActivity.class);

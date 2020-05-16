@@ -23,8 +23,8 @@ public class WasteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_waste);
 
         viewPager = findViewById(R.id.pager);
-        btnReusable= findViewById(R.id.btnGoReusable);
-        btnRecycle= findViewById(R.id.btnGoRecycle);
+        btnReusable= findViewById(R.id.btnReusable);
+        btnRecycle= findViewById(R.id.btnRecycle);
 
         layouts = new int[]{
                 R.layout.slider,
@@ -35,7 +35,7 @@ public class WasteActivity extends AppCompatActivity {
         adapter = new Adapter(this, layouts);
         viewPager.setAdapter(adapter);
 
-        Button fab = findViewById(R.id.btnGoReusable);
+        Button fab = findViewById(R.id.btnReusable);
         fab.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -48,7 +48,7 @@ public class WasteActivity extends AppCompatActivity {
             }
         });
 
-        Button fab2 = findViewById(R.id.btnGoRecycle);
+        Button fab2 = findViewById(R.id.btnRecycle);
         fab2.setOnClickListener(new View.OnClickListener() {
 
 
@@ -122,14 +122,7 @@ public class WasteActivity extends AppCompatActivity {
 
 
         }
-        if (id == R.id.users)
-        {
-            Intent logoutIntent = new Intent(this, Logout.class);
 
-            startActivity(logoutIntent);
-
-
-        }
         if (id == R.id.challenge)
         {
             Intent logoutIntent = new Intent(this, UserAreaActivity.class);

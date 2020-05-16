@@ -14,8 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".GoSave"></activity>
+        <activity android:name=".GoWalk" />
+        <activity android:name=".GoDairy" />
+        <activity android:name=".GoVegan" />
+        <activity android:name=".GoFull" />
+        <activity android:name=".GoGlass" />
         <activity android:name=".DashboardActivity" />
-        <activity android:name=".AddReusable" />
+        <activity android:name=".AddEvidence" />
         <activity android:name=".CompletedChallenge" />
         <activity android:name=".GoRecycle" />
         <activity android:name=".GoReusable" />
@@ -36,7 +42,6 @@
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".GreenTech" />
-        <activity android:name=".Testimoniais" />
         <activity android:name=".About" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".UserAreaActivity" />

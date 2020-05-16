@@ -15,7 +15,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.DocumentReference;
 import com.squareup.picasso.Picasso;
 
 import java.util.Calendar;
@@ -29,7 +28,7 @@ public class AdapterPost extends RecyclerView.Adapter<AdapterPost.MyHolder>{
     String userId;
 
 
-    private DocumentReference postsRef;
+
 
 
 
@@ -38,7 +37,7 @@ public class AdapterPost extends RecyclerView.Adapter<AdapterPost.MyHolder>{
         this.postList=postList;
 
         userId= FirebaseAuth.getInstance().getCurrentUser().getUid();
-       // postsRef= FirebaseFirestore.getInstance().document("Posts");
+
 
     }
 
@@ -69,6 +68,8 @@ public class AdapterPost extends RecyclerView.Adapter<AdapterPost.MyHolder>{
         final String profileImage = postList.get(i).getProfileImage();
         String pTimeStamp = postList.get(i).getpTime();
 
+
+
         //convert timestamp to dd/mm/yyyy hh:mm am/pm
 
         Calendar calendar = Calendar.getInstance(Locale.getDefault());
@@ -81,7 +82,6 @@ public class AdapterPost extends RecyclerView.Adapter<AdapterPost.MyHolder>{
         myHolder.pTimeTv.setText(pTime);
         myHolder.pTitleTv.setText(pTitle);
         myHolder.pDescriptionTv.setText(pDescription);
-
 
 
         //set user dp
@@ -132,8 +132,6 @@ public class AdapterPost extends RecyclerView.Adapter<AdapterPost.MyHolder>{
             });
         //handle button clicks
         myHolder.likeBtn.setOnClickListener(new View.OnClickListener(){
-
-
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "Likes", Toast.LENGTH_SHORT).show();
@@ -141,6 +139,7 @@ public class AdapterPost extends RecyclerView.Adapter<AdapterPost.MyHolder>{
             }
 
         });
+
         //handle button clicks
         myHolder.commentBtn.setOnClickListener(new View.OnClickListener(){
 
@@ -166,7 +165,9 @@ public class AdapterPost extends RecyclerView.Adapter<AdapterPost.MyHolder>{
 
         }
 
-            @Override
+
+
+    @Override
     public int getItemCount() {
         return postList.size();
     }

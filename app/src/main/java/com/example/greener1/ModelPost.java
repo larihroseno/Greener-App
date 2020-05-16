@@ -2,34 +2,27 @@ package com.example.greener1;
 
 public class ModelPost {
 
-     String uid, userName, email,dp, pId, pTitle, pDescr, profileImage, pTime;
+     String uid, userName, email,dp, pLikes, pId, pTitle, pDescr, profileImage, pTime;
 
 public ModelPost (){
 
     }
 
-    public ModelPost(String uid, String userName, String email,String dp, String pId, String pTitle, String pDescr, String profileImage, String pTime) {
+    public ModelPost(String uid, String userName, String email, String dp, String pLikes, String pId, String pTitle, String pDescr, String profileImage, String pTime) {
         this.uid = uid;
         this.userName = userName;
         this.email = email;
+        this.dp = dp;
+        this.pLikes = pLikes;
         this.pId = pId;
         this.pTitle = pTitle;
         this.pDescr = pDescr;
         this.profileImage = profileImage;
         this.pTime = pTime;
-        this.dp = dp;
     }
 
     public String getUid() {
         return uid;
-    }
-
-    public String getDp() {
-        return dp;
-    }
-
-    public void setDp(String dp) {
-        this.dp = dp;
     }
 
     public void setUid(String uid) {
@@ -50,6 +43,22 @@ public ModelPost (){
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getDp() {
+        return dp;
+    }
+
+    public void setDp(String dp) {
+        this.dp = dp;
+    }
+
+    public String getpLikes() {
+        return pLikes;
+    }
+
+    public void setpLikes(String pLikes) {
+        this.pLikes = pLikes;
     }
 
     public String getpId() {
