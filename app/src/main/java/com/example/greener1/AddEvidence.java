@@ -511,7 +511,7 @@ public class AddEvidence extends AppCompatActivity {
         if (id == R.id.home)
         {
 
-            Intent homeIntent = new Intent(this, HomeFragment.class);
+            Intent homeIntent = new Intent(this, DashboardActivity.class);
             startActivity(homeIntent);
         }
         if (id == R.id.profile)

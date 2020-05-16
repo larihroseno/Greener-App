@@ -7,8 +7,6 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.auth.FirebaseAuth;
-
 public class Logout extends AppCompatActivity {
 
     @Override
@@ -56,9 +54,10 @@ public class Logout extends AppCompatActivity {
 
     }
     private void  goToYesAnswear() {
-        FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-        finish();
+
+        Intent intent = new Intent(this, LoginActivity.class);
+
+        startActivity(intent);
 
 
 

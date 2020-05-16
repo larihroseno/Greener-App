@@ -22,7 +22,6 @@
         <activity android:name=".GoGlass" />
         <activity android:name=".DashboardActivity" />
         <activity android:name=".AddEvidence" />
-        <activity android:name=".CompletedChallenge" />
         <activity android:name=".GoRecycle" />
         <activity android:name=".GoReusable" />
         <activity android:name=".EnergyActivity" />
@@ -30,7 +29,6 @@
         <activity android:name=".WaterActivity" />
         <activity android:name=".WasteActivity" />
         <activity android:name=".Logout" />
-        <activity android:name=".ChallengesHistory" />
         <activity android:name=".SettingsUser" />
         <activity android:name=".HomeFragment" />
         <activity android:name=".MainActivity">

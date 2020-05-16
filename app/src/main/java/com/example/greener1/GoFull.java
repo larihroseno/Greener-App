@@ -73,7 +73,7 @@ public class GoFull extends AppCompatActivity {
     }
     private void  goToBackActivity() {
 
-        Intent intent2 = new Intent(this, WasteActivity.class);
+        Intent intent2 = new Intent(this, WaterActivity.class);
 
         startActivity(intent2);
 

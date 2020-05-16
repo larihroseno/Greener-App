@@ -73,7 +73,7 @@ public class GoSave extends AppCompatActivity {
     }
     private void  goToBackActivity() {
 
-        Intent intent2 = new Intent(this, WasteActivity.class);
+        Intent intent2 = new Intent(this, EnergyActivity.class);
 
         startActivity(intent2);
 
