@@ -504,6 +504,7 @@ public class AddEvidence extends AppCompatActivity {
         return true;
     }
 
+    //The startActivity() method starts an instance of the Activity that's specified by the Intent.
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id=item.getItemId();

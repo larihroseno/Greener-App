@@ -240,6 +240,7 @@ public class HomeFragment extends Fragment {
       }
 
     //handle menu item clicks
+    //The startActivity() method starts an instance of the Activity that's specified by the Intent.
     @Override
       public boolean onOptionsItemSelected(@NonNull MenuItem item) {
           int id = item.getItemId();

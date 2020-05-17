@@ -21,7 +21,15 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
+
+//this class will display the challenges options
+
 public class UserAreaActivity extends AppCompatActivity {
+
+    // variables
+    //buttons
+    //authentications
+
     AppCompatImageButton water, waste, diet, energy;
     TextView welcomeMsg;
     FirebaseAuth fAuth;
@@ -34,6 +42,8 @@ public class UserAreaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_area);
 
+        //init variables
+
         water = findViewById(R.id.btnWater);
         waste = findViewById(R.id.btnWaste);
         diet = findViewById(R.id.btnDiet);
@@ -45,6 +55,7 @@ public class UserAreaActivity extends AppCompatActivity {
 
         userId = fAuth.getCurrentUser().getUid();
 
+        //get user id to set the Welcome Msg
         DocumentReference documentReference = fStore.collection("user").document(userId);
 
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
@@ -87,7 +98,7 @@ public class UserAreaActivity extends AppCompatActivity {
 
     }
 
-
+    //set menu Bar
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -9,9 +9,13 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+
+
+//this class content is to display the images of the students who worked in te project
+
 public class GreenTech extends AppCompatActivity {
 
-    private static final String TAG = "TAG";
+   //images set in the activity xml file
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +26,7 @@ public class GreenTech extends AppCompatActivity {
     }
 
 
-
+    //set a menu Bar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater= getMenuInflater();
@@ -33,6 +37,7 @@ public class GreenTech extends AppCompatActivity {
         return true;
     }
 
+    //The startActivity() method starts an instance of the Activity that's specified by the Intent.
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id=item.getItemId();

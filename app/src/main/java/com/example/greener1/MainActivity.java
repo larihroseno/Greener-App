@@ -11,6 +11,11 @@ import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+// this class has two buttons with two different options to follow
+//Login in case the user has already registered in the app
+//Register in case the user desire to register into the app
+
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+// handle button clicks
+        //go to acitvities
 
     Button fab = findViewById(R.id.btLogin);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
+
+    //The startActivity() method starts an instance of the Activity that's specified by the Intent.
     private void goToLoginActivity() {
 
         Intent intent = new Intent(this, LoginActivity.class);

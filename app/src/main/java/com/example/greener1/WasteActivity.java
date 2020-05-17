@@ -26,6 +26,8 @@ public class WasteActivity extends AppCompatActivity {
         btnReusable= findViewById(R.id.btnReusable);
         btnRecycle= findViewById(R.id.btnRecycle);
 
+        //init layouts
+
         layouts = new int[]{
                 R.layout.slider,
                 R.layout.slider2
@@ -84,7 +86,7 @@ public class WasteActivity extends AppCompatActivity {
     }
 
 
-
+      //set menuBar
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -95,6 +97,8 @@ public class WasteActivity extends AppCompatActivity {
 
         return true;
     }
+
+    //The startActivity() method starts an instance of the Activity that's specified by the Intent.
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

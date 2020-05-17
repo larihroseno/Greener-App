@@ -15,14 +15,21 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+//this class will show the nav_Bar menu with two options
+// and the menuBar with 5 options
+
 public class DashboardActivity extends AppCompatActivity {
 
+    //Firebase authentication
     FirebaseAuth fAuth;
     FirebaseUser user;
 
     String userId;
 
+
+    //apply Action bar to the page
     ActionBar actionBar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +85,8 @@ public class DashboardActivity extends AppCompatActivity {
                 switch(menuItem.getItemId()) {
 
                     case R.id.nav_challenges:
+                        //challenge page is not a fragment but an activity thats way the way you have to call it is different
+
                         actionBar.setTitle("Challenge yourself"); //change action bar title
                         startActivity(new Intent(getApplicationContext(),UserAreaActivity.class));
                         overridePendingTransition(0,0);
@@ -100,6 +109,7 @@ public class DashboardActivity extends AppCompatActivity {
         return true;
     }
 
+    //The startActivity() method starts an instance of the Activity that's specified by the Intent.
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id=item.getItemId();

@@ -13,7 +13,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 public class DietActivity extends AppCompatActivity {
+
+    //using viewPager to display two page in one (two slides)
+
+
+    // ViewPager objects have built-in swipe gestures to transition through pages
+// and they display screen slide animations by default
     ViewPager viewPager;
+    //create buttons to navigation to other two pages
     Button btnDairy, btnVegan;
     int[] layouts;
     Adapter adapter;
@@ -22,10 +29,12 @@ public class DietActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diet);
 
+        //init
         viewPager = findViewById(R.id.pager);
         btnDairy= findViewById(R.id.btnDairy);
         btnVegan= findViewById(R.id.btnVegan);
 
+        //init the layouts
         layouts = new int[]{
                 R.layout.slider5,
                 R.layout.slider6
@@ -68,6 +77,9 @@ public class DietActivity extends AppCompatActivity {
 
 
     }
+
+    //The startActivity() method starts an instance of the Activity that's specified by the Intent.
+
     private void goToDairyActivity() {
 
         Intent intent = new Intent(this, GoDairy.class);
@@ -93,7 +105,7 @@ public class DietActivity extends AppCompatActivity {
 
 
         return true;
-    }
+    }//The startActivity() method starts an instance of the Activity that's specified by the Intent.
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

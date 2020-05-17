@@ -10,11 +10,21 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-public class About extends AppCompatActivity {
+//class that contains information about the APP
 
+public class About extends AppCompatActivity {
+    //using viewPager to display two page in one(two slides)
+
+
+// ViewPager objects have built-in swipe gestures to transition through pages
+// and they display screen slide animations by default
 
     ViewPager viewPager;
+
+    //two pages using LAYOUTS
     int[] layouts;
+    //adapter to make the transition
+
     Adapter adapter;
 
     @Override
@@ -23,9 +33,10 @@ public class About extends AppCompatActivity {
         setContentView(R.layout.activity_about);
 
 
-
+       //id of the page "activity_about"
         viewPager = findViewById(R.id.pager);
 
+        //layouts created as activities
         layouts = new int[]{
                 R.layout.slidermain,
                 R.layout.slidermain2
@@ -38,6 +49,7 @@ public class About extends AppCompatActivity {
     }
 
 
+      //menuBar to show the options at the top of the page
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -48,6 +60,8 @@ public class About extends AppCompatActivity {
 
         return true;
     }
+
+    //The startActivity() method starts an instance of the Activity that's specified by the Intent.
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

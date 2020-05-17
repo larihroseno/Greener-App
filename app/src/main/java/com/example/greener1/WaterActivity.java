@@ -13,7 +13,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 public class WaterActivity extends AppCompatActivity {
+    //using viewPager to display two page in one (two slides)
+
+
+    // ViewPager objects have built-in swipe gestures to transition through pages
+// and they display screen slide animations by default
     ViewPager viewPager;
+    //create buttons to navigation to other two pages
     Button btnGlass, btnFull;
     int[] layouts;
     Adapter adapter;
@@ -25,6 +31,8 @@ public class WaterActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.pager);
         btnGlass= findViewById(R.id.btnGoGlass);
         btnFull= findViewById(R.id.btnFull);
+
+        //init layouts
 
         layouts = new int[]{
                 R.layout.slider3,
@@ -83,7 +91,7 @@ public class WaterActivity extends AppCompatActivity {
 
     }
 
-
+    //set menu Bar
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -94,6 +102,8 @@ public class WaterActivity extends AppCompatActivity {
 
         return true;
     }
+
+    //The startActivity() method starts an instance of the Activity that's specified by the Intent.
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

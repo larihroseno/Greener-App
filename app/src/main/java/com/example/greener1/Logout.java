@@ -7,6 +7,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
+//class to logout out of the app
+//the inital idea was to use "Firebase signout" function
+// but it got a little trick at the end, so Ive decide to use bottons to logout
+
 public class Logout extends AppCompatActivity {
 
     @Override
@@ -53,6 +58,11 @@ public class Logout extends AppCompatActivity {
 
 
     }
+
+    //The startActivity() method starts an instance of the Activity that's specified by the Intent.
+
+    //if yes button is pressed it will take the user to the login page.
+
     private void  goToYesAnswear() {
 
         Intent intent = new Intent(this, LoginActivity.class);
@@ -62,6 +72,7 @@ public class Logout extends AppCompatActivity {
 
 
     }
+    //if nobutton is pressed it will take the user to the Dashboard Activity where all the posts are
     private void  goToNoAnswear() {
 
         Intent intent = new Intent(this, DashboardActivity.class);

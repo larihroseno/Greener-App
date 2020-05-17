@@ -12,19 +12,23 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
+
+
+// this class has two buttons with two different options to follow
+//ADD EVIDENNCE in case the user wnats to post something
+//Back button in case the user desire to choose another challenge to complete
 
 public class GoFull extends AppCompatActivity {
-    ViewPager viewPager;
+
+    //set buttons
     Button btnAddEvidence, btnBack;
-    int[] layouts;
-    Adapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_go_full);
 
-
+        //init buttons
         btnAddEvidence= findViewById(R.id.btnAdd);
         btnBack= findViewById(R.id.btnBack);
 
@@ -64,6 +68,8 @@ public class GoFull extends AppCompatActivity {
 
 
     }
+
+    //The startActivity() method starts an instance of the Activity that's specified by the Intent.
     private void goToEvidenceActivity() {
 
         Intent intent = new Intent(this, AddEvidence.class);
@@ -80,7 +86,7 @@ public class GoFull extends AppCompatActivity {
     }
 
 
-
+     //set menuBar
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

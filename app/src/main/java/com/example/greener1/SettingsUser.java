@@ -35,7 +35,10 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+//this class will handle the user profile
+
 public class SettingsUser extends AppCompatActivity {
+    //variables
     TextView userName, email;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -50,6 +53,8 @@ public class SettingsUser extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_user);
+
+        //init variables
         userName = findViewById(R.id.profileUserName);
         email = findViewById(R.id.profileEmail);
         resetPassword = findViewById(R.id.resetPasswordLocal);
@@ -57,10 +62,11 @@ public class SettingsUser extends AppCompatActivity {
         changeProfile = findViewById(R.id.upload);
 
 
-
+        //get firebase authentication
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
+          //get intance of firebase storage
         storageReference = FirebaseStorage.getInstance().getReference();
         StorageReference profileRef=storageReference.child("users/" +fAuth.getCurrentUser().getUid()+"/profile.jpg");
         profileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
@@ -190,6 +196,7 @@ public class SettingsUser extends AppCompatActivity {
 
     }
 
+    //set menu Bar to the page
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater= getMenuInflater();
@@ -200,6 +207,7 @@ public class SettingsUser extends AppCompatActivity {
         return true;
     }
 
+    //The startActivity() method starts an instance of the Activity that's specified by the Intent.
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id=item.getItemId();
